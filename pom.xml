@@ -9,10 +9,11 @@
     <packaging>pom</packaging>
 
     <name>SpringStudyProject</name>
-    <description>chinaxlt&#39;s Demo project for Spring Boot</description>
+    <description>Spring Boot Study Project</description>
 
     <modules>
         <module>server</module>
+        <module>server-starter</module>
     </modules>
 
     <properties>
@@ -22,12 +23,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>
