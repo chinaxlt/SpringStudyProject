@@ -12,7 +12,7 @@
     <description>chinaxlt&#39;s Demo project for Spring Boot</description>
 
     <modules>
-        <module>service</module>
+        <module>server</module>
     </modules>
 
     <properties>
@@ -23,13 +23,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
