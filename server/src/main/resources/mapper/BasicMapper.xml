@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="Basic">
+<mapper namespace="com.chinaxlt.study.dao.BasicDao">
+
+    <resultMap id="BasicMap" type="com.chinaxlt.study.pojo.Basic">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="value" property="value" jdbcType="VARCHAR"/>
+    </resultMap>
 
     <sql id="tb">
         basic
@@ -15,5 +20,13 @@
     #{id},
     #{value}
     </sql>
+
+    <select id="findById" resultMap="BasicMap" parameterType="java.lang.Long">
+        select
+        <include refid="cols_all"/>
+        from
+        <include refid="tb"/>
+        where id = #{id,jdbcType=INTEGER}
+    </select>
 
 </mapper>
