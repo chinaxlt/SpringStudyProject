@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yourDB
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 60000
+
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: com.chinaxlt.study.pojo
+
+dubbo:
+  application.name: server
+  protocol:
+    name: dubbo
+    port: 26880
+  consumer:
+    check: false
+  registry:
+    id: chinaxlt
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.chinaxlt.study.service
